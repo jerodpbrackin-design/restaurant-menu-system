@@ -1,14 +1,40 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { Menu } from './components/Menu';
+import { OrderPage } from './components/OrderPage';
 
 function App() {
+  return (
+    <Router>
+      {/* Centered Navigation Bar */}
+      <nav style={{ 
+        padding: "30px 20px", 
+        display: "flex", 
+        justifyContent: "center", 
+        alignItems: "center",
+        gap: "20px",
+        background: "var(--warm-cream)", // Matches your body background
+        borderBottom: "1px solid rgba(0,0,0,0.05)"
+      }}>
+        
+        {/* Menu Link styled as a button */}
+        <Link to="/" className="btn-secondary" style={{ padding: "10px 24px" }}>
+          Menu
+        </Link>
+        
+        {/* Order Now Link styled as a button */}
+        <Link to="/order" className="btn-secondary" style={{ padding: "10px 24px" }}>
+          Order Now
+        </Link>
 
-  return <>
-    <Menu />
-  </>;
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Menu />} />
+        <Route path="/order" element={<OrderPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
