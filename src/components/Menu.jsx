@@ -56,7 +56,6 @@ export const Menu = () => {
     );
 
   return (
-    // THE OUTER WRAPPER: Centers the entire page content
     <div
       style={{
         display: "flex",

@@ -6,23 +6,20 @@ import { OrderPage } from './components/OrderPage';
 function App() {
   return (
     <Router>
-      {/* Centered Navigation Bar */}
       <nav style={{ 
         padding: "30px 20px", 
         display: "flex", 
         justifyContent: "center", 
         alignItems: "center",
         gap: "20px",
-        background: "var(--warm-cream)", // Matches your body background
+        background: "var(--warm-cream)", 
         borderBottom: "1px solid rgba(0,0,0,0.05)"
       }}>
         
-        {/* Menu Link styled as a button */}
         <Link to="/" className="btn-secondary" style={{ padding: "10px 24px" }}>
           Menu
         </Link>
         
-        {/* Order Now Link styled as a button */}
         <Link to="/order" className="btn-secondary" style={{ padding: "10px 24px" }}>
           Order Now
         </Link>
